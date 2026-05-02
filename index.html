@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sai Likhitha & Jaya Sai Sandeep — Wedding Invitation</title>
+    <meta name="description" content="You are cordially invited to the wedding celebration of Sai Likhitha Allanki and Jaya Sai Sandeep Paritala. Join us for the Haldi, Wedding Ceremony, and Reception in Ohio, July 2-3, 2026.">
+    <meta name="keywords" content="wedding, Indian wedding, Sai Likhitha, Jaya Sai Sandeep, Allanki, Paritala, Haldi, Reception, Ohio">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Great+Vibes&family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Floating Petals Animation Container -->
+    <div class="petals-container" id="petalsContainer" aria-hidden="true"></div>
+
+    <!-- Navigation -->
+    <nav class="main-nav" id="mainNav">
+        <div class="nav-inner">
+            <a href="#hero" class="nav-logo">L & S</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#couple">Our Story</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#haldi">Haldi</a></li>
+                <li><a href="#wedding">Wedding</a></li>
+                <li><a href="#reception">Reception</a></li>
+                <li><a href="#rsvp">RSVP</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ======== HERO SECTION ======== -->
+    <section class="hero" id="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-mandala hero-mandala--left" aria-hidden="true"></div>
+        <div class="hero-mandala hero-mandala--right" aria-hidden="true"></div>
+        <div class="hero-content">
+            <div class="hero-ganesha">
+                <img src="images/ganesha_blessing.png" alt="Lord Ganesha blessing" loading="eager">
+            </div>
+            <p class="hero-subtitle-top">Together with their families</p>
+            <div class="hero-names">
+                <h1>
+                    <span class="bride-name">Sai Likhitha</span>
+                    <span class="ampersand">&</span>
+                    <span class="groom-name">Jaya Sai Sandeep</span>
+                </h1>
+            </div>
+            <div class="hero-divider-img">
+                <img src="images/ornamental_divider.png" alt="decorative divider" loading="eager">
+            </div>
+            <p class="hero-tagline">Request the pleasure of your company at their wedding celebration</p>
+            <div class="hero-date">
+                <span class="date-badge">July 2 – 3, 2026</span>
+            </div>
+            <div class="countdown" id="countdown">
+                <div class="countdown-item">
+                    <span class="countdown-value" id="countDays">00</span>
+                    <span class="countdown-label">Days</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-value" id="countHours">00</span>
+                    <span class="countdown-label">Hours</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-value" id="countMinutes">00</span>
+                    <span class="countdown-label">Minutes</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-value" id="countSeconds">00</span>
+                    <span class="countdown-label">Seconds</span>
+                </div>
+            </div>
+            <a href="#events" class="hero-scroll-cta">View Events ↓</a>
+        </div>
+    </section>
+
+    <!-- ======== COUPLE SECTION ======== -->
+    <section class="section couple-section" id="couple">
+        <div class="section-ornament top" aria-hidden="true"></div>
+        <div class="container">
+            <h2 class="section-title">The Happy Couple</h2>
+            <div class="section-divider"></div>
+            <div class="couple-grid">
+                <div class="couple-card couple-card--bride animate-on-scroll">
+                    <div class="couple-card-frame">
+                        <img src="images/bride.jpeg" alt="Sai Likhitha" class="couple-photo">
+                    </div>
+                    <h3>Sai Likhitha Allanki</h3>
+                    <p class="couple-role">The Bride</p>
+                </div>
+                <div class="couple-heart animate-on-scroll">
+                    <svg viewBox="0 0 100 100" class="heart-svg">
+                        <path d="M50 88 C25 65 5 50 5 30 C5 15 17 5 30 5 C38 5 45 10 50 18 C55 10 62 5 70 5 C83 5 95 15 95 30 C95 50 75 65 50 88Z" fill="currentColor"/>
+                    </svg>
+                </div>
+                <div class="couple-card couple-card--groom animate-on-scroll">
+                    <div class="couple-card-frame">
+                        <img src="images/groom.jpeg" alt="Jaya Sai Sandeep" class="couple-photo">
+                    </div>
+                    <h3>Jaya Sai Sandeep Paritala</h3>
+                    <p class="couple-role">The Groom</p>
+                </div>
+            </div>
+        </div>
+        <div class="section-ornament bottom" aria-hidden="true"></div>
+    </section>
+
+    <!-- ======== EVENTS OVERVIEW ======== -->
+    <section class="section events-overview" id="events">
+        <div class="container">
+            <h2 class="section-title">Wedding Celebrations</h2>
+            <div class="section-divider"></div>
+            <p class="section-subtitle">Join us across two joyous days of celebration, tradition, and togetherness</p>
+            <div class="timeline">
+                <div class="timeline-line" aria-hidden="true"></div>
+                <!-- Haldi -->
+                <div class="timeline-item timeline-item--left animate-on-scroll">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">July 2, 2026</span>
+                        <h3>Haldi Ceremony</h3>
+                        <p>A vibrant celebration of turmeric blessings, laughter, and love — kicking off the wedding festivities!</p>
+                        <a href="#haldi" class="timeline-link">View Details →</a>
+                    </div>
+                </div>
+                <!-- Wedding -->
+                <div class="timeline-item timeline-item--right animate-on-scroll">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">July 3, 2026 — Morning</span>
+                        <h3>Wedding Ceremony</h3>
+                        <p>The sacred Muhurtham — witness the divine union under Vedic rituals and blessings.</p>
+                        <a href="#wedding" class="timeline-link">View Details →</a>
+                    </div>
+                </div>
+                <!-- Reception -->
+                <div class="timeline-item timeline-item--left animate-on-scroll">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">July 3, 2026 — Evening</span>
+                        <h3>Grand Reception</h3>
+                        <p>An evening of celebration, music, dinner, and heartfelt moments with family and friends.</p>
+                        <a href="#reception" class="timeline-link">View Details →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======== HALDI EVENT ======== -->
+    <section class="event-section event-haldi" id="haldi">
+        <div class="event-bg-image" style="background-image: url('images/haldi_bg.jpg');" aria-hidden="true"></div>
+        <div class="event-overlay event-overlay--haldi"></div>
+        <div class="container">
+            <div class="event-card animate-on-scroll">
+                <div class="event-icon">🌼</div>
+                <span class="event-badge">Day 1</span>
+                <h2 class="event-title">Haldi Ceremony</h2>
+                <div class="event-divider"></div>
+                <p class="event-description">The Haldi ceremony is a cherished pre-wedding ritual where turmeric paste is lovingly applied to the bride and groom by family and friends, symbolizing purification, blessings, and a golden beginning to married life. Come dressed in festive yellows!</p>
+                <div class="event-details-grid">
+                    <div class="event-detail">
+                        <div class="event-detail-icon">📅</div>
+                        <div>
+                            <strong>Date</strong>
+                            <p>Wednesday, July 2, 2026</p>
+                        </div>
+                    </div>
+                    <div class="event-detail">
+                        <div class="event-detail-icon">🕐</div>
+                        <div>
+                            <strong>Time</strong>
+                            <p>10:00 AM onwards</p>
+                        </div>
+                    </div>
+                    <div class="event-detail">
+                        <div class="event-detail-icon">📍</div>
+                        <div>
+                            <strong>Venue</strong>
+                            <p>5459 Middlebury Loop<br>Lewis Center, OH 43035</p>
+                        </div>
+                    </div>
+                    <div class="event-detail">
+                        <div class="event-detail-icon">👗</div>
+                        <div>
+                            <strong>Dress Code</strong>
+                            <p>Festive Indian / Yellow attire</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="https://www.google.com/maps/search/?api=1&query=5459+Middlebury+Loop+Lewis+Center+OH+43035" target="_blank" rel="noopener noreferrer" class="event-map-btn" id="haldiMapBtn">
+                    📍 Get Directions
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======== WEDDING EVENT ======== -->
+    <section class="event-section event-wedding" id="wedding">
+        <div class="event-bg-image" style="background-image: url('images/new_wedding_bg.png');" aria-hidden="true"></div>
+        <div class="event-overlay event-overlay--wedding"></div>
+        <div class="container">
+            <div class="event-card animate-on-scroll">
+                <div class="event-icon">🪔</div>
+                <span class="event-badge event-badge--wedding">Day 2 — Morning</span>
+                <h2 class="event-title">Wedding Ceremony</h2>
+                <div class="event-divider"></div>
+                <p class="event-description">Witness the sacred Muhurtham — the auspicious moment when Sai Likhitha and Jaya Sai Sandeep begin their eternal journey together. The ceremony will follow traditional Vedic rituals including Kanyadaanam, Mangalsutra Dharanam, and Saptapadi, blessed by family, friends, and the divine.</p>
+                <div class="event-details-grid">
+                    <div class="event-detail">
+                        <div class="event-detail-icon">📅</div>
+                        <div>
+                            <strong>Date</strong>
+                            <p>Thursday, July 3, 2026</p>
+                        </div>
+                    </div>
+                    <div class="event-detail">
+                        <div class="event-detail-icon">🕐</div>
+                        <div>
+                            <strong>Muhurtham</strong>
+                            <p>11:30 AM</p>
+                        </div>
+                    </div>
+                    <div class="event-detail">
+                        <div class="event-detail-icon">📍</div>
+                        <div>
+                            <strong>Venue</strong>
+                            <p>Chinmaya Mission Columbus<br>2291 Clark-Shaw Rd<br>Powell, OH 43065</p>
+                        </div>
+                    </div>
+                    <div class="event-detail">
+                        <div class="event-detail-icon">👗</div>
+                        <div>
+                            <strong>Dress Code</strong>
+                            <p>Traditional Indian Formal</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="https://www.google.com/maps/search/?api=1&query=Chinmaya+Mission+Columbus+2291+Clark+Shaw+Rd+Powell+OH+43065" target="_blank" rel="noopener noreferrer" class="event-map-btn event-map-btn--wedding" id="weddingMapBtn">
+                    📍 Get Directions
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======== RECEPTION EVENT ======== -->
+    <section class="event-section event-reception" id="reception">
+        <div class="event-bg-image" style="background-image: url('images/new_footer_bg.png');" aria-hidden="true"></div>
+        <div class="event-overlay event-overlay--reception"></div>
+        <div class="container">
+            <div class="event-card animate-on-scroll">
+                <div class="event-icon">🎉</div>
+                <span class="event-badge event-badge--reception">Day 2 — Evening</span>
+                <h2 class="event-title">Grand Reception</h2>
+                <div class="event-divider"></div>
+                <p class="event-description">Celebrate the newlyweds at a grand evening reception filled with delicious cuisine, music, dancing, and unforgettable memories. Join us for an enchanting evening as we toast to love, laughter, and happily ever after!</p>
+                <div class="event-details-grid">
+                    <div class="event-detail">
+                        <div class="event-detail-icon">📅</div>
+                        <div>
+                            <strong>Date</strong>
+                            <p>Thursday, July 3, 2026</p>
+                        </div>
+                    </div>
+                    <div class="event-detail">
+                        <div class="event-detail-icon">🕐</div>
+                        <div>
+                            <strong>Time</strong>
+                            <p>7:00 PM onwards</p>
+                        </div>
+                    </div>
+                    <div class="event-detail">
+                        <div class="event-detail-icon">📍</div>
+                        <div>
+                            <strong>Venue</strong>
+                            <p>American Legion<br>393 E College Ave<br>Westerville, OH 43081</p>
+                        </div>
+                    </div>
+                    <div class="event-detail">
+                        <div class="event-detail-icon">👗</div>
+                        <div>
+                            <strong>Dress Code</strong>
+                            <p>Indo-Western / Festive Formal</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="https://www.google.com/maps/search/?api=1&query=American+Legion+393+E+College+Ave+Westerville+OH+43081" target="_blank" rel="noopener noreferrer" class="event-map-btn event-map-btn--reception" id="receptionMapBtn">
+                    📍 Get Directions
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======== RSVP SECTION ======== -->
+    <section class="section rsvp-section" id="rsvp">
+        <div class="container">
+            <h2 class="section-title">RSVP</h2>
+            <div class="section-divider"></div>
+            <p class="section-subtitle">We would be thrilled to celebrate with you. Please let us know if you can make it!</p>
+            <div class="rsvp-card animate-on-scroll">
+                <form id="rsvpForm" class="rsvp-form">
+                    <div class="form-group">
+                        <label for="guestName">Full Name</label>
+                        <input type="text" id="guestName" name="guestName" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="guestPhone">Phone Number</label>
+                        <input type="text" id="guestPhone" name="guestPhone" placeholder="Enter your phone number" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="guestCount">Number of Guests</label>
+                        <select id="guestCount" name="guestCount">
+                            <option value="1">1 Person</option>
+                            <option value="2">2 People</option>
+                            <option value="3">3 People</option>
+                            <option value="4">4+ People</option>
+                        </select>
+                    </div>
+                    <div class="form-group full-width">
+                        <label>Events Attending</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-label"><input type="checkbox" name="events" value="haldi"> Haldi</label>
+                            <label class="checkbox-label"><input type="checkbox" name="events" value="wedding" checked> Wedding</label>
+                            <label class="checkbox-label"><input type="checkbox" name="events" value="reception" checked> Reception</label>
+                        </div>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="guestMessage">Message for the Couple (Optional)</label>
+                        <textarea id="guestMessage" name="guestMessage" rows="3" placeholder="Leave a wish or let us know about any dietary restrictions..."></textarea>
+                    </div>
+                    <div class="form-submit full-width">
+                        <button type="submit" class="event-map-btn rsvp-submit-btn">Send RSVP ✨</button>
+                    </div>
+                </form>
+                <div id="rsvpSuccess" class="rsvp-success" style="display: none;">
+                    <h3>Thank You!</h3>
+                    <p>Your RSVP has been successfully received. We can't wait to celebrate with you!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======== BLESSING / FOOTER ======== -->
+    <footer class="footer" id="footer">
+        <div class="footer-mandala" aria-hidden="true"></div>
+        <div class="container">
+            <img src="images/ornamental_divider.png" alt="" class="footer-divider-img" loading="lazy">
+            <p class="footer-translation">May all beings be happy</p>
+            <div class="footer-names">
+                <span class="footer-name">Sai Likhitha</span>
+                <span class="footer-amp">&</span>
+                <span class="footer-name">Jaya Sai Sandeep</span>
+            </div>
+            <p class="footer-date">July 2 – 3, 2026 · Ohio, USA</p>
+            <p class="footer-families">With love from the Allanki & Paritala families</p>
+            <div class="footer-hearts" aria-hidden="true">
+                ❤️ 🪷 ❤️
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
