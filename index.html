@@ -314,10 +314,18 @@
                         <label for="guestPhone">Phone Number</label>
                         <input type="text" id="guestPhone" name="guestPhone" placeholder="Enter your phone number" required>
                     </div>
+                    <div class="form-group full-width">
+                        <label>Will you be attending?</label>
+                        <div class="radio-group">
+                            <label class="radio-label"><input type="radio" name="attendance" value="yes" checked> Yes, I'll be there!</label>
+                            <label class="radio-label"><input type="radio" name="attendance" value="no"> Respectfully Decline</label>
+                        </div>
+                    </div>
                     <div class="form-group">
                         <label for="guestCount">Number of Guests</label>
                         <select id="guestCount" name="guestCount">
-                            <option value="1">1 Person</option>
+                            <option value="0">0 People</option>
+                            <option value="1" selected>1 Person</option>
                             <option value="2">2 People</option>
                             <option value="3">3 People</option>
                             <option value="4">4+ People</option>

@@ -121,6 +121,42 @@
     const scriptURL = 'https://script.google.com/macros/s/AKfycbz64LZvQIZpml5h2ZRD9HFfTbUG1Jtolfvn9azSjIHbNmMsh_io8cAasvqUi7HEUIUCBQ/exec'; // <-- PASTE YOUR URL HERE
 
     if (rsvpForm) {
+        // ---- RSVP Attendance Toggle ----
+        const attendanceRadios = rsvpForm.querySelectorAll('input[name="attendance"]');
+        const guestCountSelect = document.getElementById('guestCount');
+        const eventCheckboxes = rsvpForm.querySelectorAll('input[name="events"]');
+
+        attendanceRadios.forEach(radio => {
+            radio.addEventListener('change', () => {
+                const isAttending = rsvpForm.attendance.value === 'yes';
+                
+                if (!isAttending) {
+                    // Set guest count to 0
+                    guestCountSelect.value = '0';
+                    // Uncheck and disable event checkboxes
+                    eventCheckboxes.forEach(cb => {
+                        cb.checked = false;
+                        cb.disabled = true;
+                        cb.parentElement.classList.add('disabled');
+                    });
+                } else {
+                    // Reset to 1 person if they were previously "No"
+                    if (guestCountSelect.value === '0') {
+                        guestCountSelect.value = '1';
+                    }
+                    // Enable event checkboxes
+                    eventCheckboxes.forEach(cb => {
+                        cb.disabled = false;
+                        cb.parentElement.classList.remove('disabled');
+                        // Re-check default events if it was empty
+                        if (cb.value === 'wedding' || cb.value === 'reception') {
+                            cb.checked = true;
+                        }
+                    });
+                }
+            });
+        });
+
         rsvpForm.addEventListener('submit', e => {
             e.preventDefault();
 
@@ -131,7 +167,11 @@
 
             // Create form data
             const formData = new FormData(rsvpForm);
-            formData.set('events', checkedEvents); // Replace array with string
+            formData.set('events', checkedEvents || 'None'); // Replace array with string
+            
+            // Add attendance explicitly if needed (FormData usually handles it, but let's be sure)
+            const attendance = rsvpForm.attendance.value === 'yes' ? 'Attending' : 'Not Attending';
+            formData.set('attendance', attendance);
 
             // Change button text while loading
             const submitBtn = rsvpForm.querySelector('button[type="submit"]');
@@ -143,6 +183,12 @@
                 .then(response => {
                     rsvpForm.style.display = 'none';
                     document.getElementById('rsvpSuccess').style.display = 'block';
+                    
+                    // Customize success message based on attendance
+                    const successP = document.querySelector('#rsvpSuccess p');
+                    if (attendance === 'Not Attending') {
+                        successP.textContent = "We're sorry you can't make it, but we appreciate you letting us know!";
+                    }
                 })
                 .catch(error => {
                     console.error('Error!', error.message);
